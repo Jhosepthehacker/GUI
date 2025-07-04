@@ -12,7 +12,12 @@ def salir_pregunta():
         ventana.destroy()
     else:
         print("La ventana todavía sigue abierta")
-      
+def saludar_al_usuario():
+    mensaje_de_saludo = messagebox.showinfo(
+  title="Saludos",
+  message="Hola, Saludos"       
+)
+
 ventana = tk.Tk()
 ventana.title("Proyecto GUI")
 ventana.geometry("400x400")
