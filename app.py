@@ -25,6 +25,9 @@ ventana.geometry("400x400")
 etiqueta = tk.Label(ventana, text="Hola, Bienvenido(a) al proyecto", bg="blue)
 etiqueta.pack(pady=10)
 
+boton = tk.Button(ventana, text="Saludos", command=saludar_al_usuario)
+boton.pack(pady=6)
+                    
 menu_bar = Menu(ventana)
                     
 file_menu = Menu(menu_bar, tearoff=0)
