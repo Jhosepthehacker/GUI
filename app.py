@@ -20,7 +20,7 @@ def saludar_al_usuario():
   message="Hola, Saludos"       
 )
 
-preguntar_al_usuario = input("Este programa requiere de interfaz desea continuar: ")
+preguntar_al_usuario = input("Este programa requiere de interfaz desea continuar, ¿Estás en un entorno gráfico?: ")
 
 if preguntar_al_usuario == "si" or preguntar_al_usuario == "sí" or preguntar_al_usuario == "si " or preguntar_al_usuario == "sí ":
     ventana = tk.Tk()
