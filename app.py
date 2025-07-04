@@ -24,7 +24,7 @@ menu_bar = Menu(ventana)
                     
 file_menu = Menu(menu_bar, tearoff=0)
 file_menu.add_command(label="Salir", command=salir_pregunta)
-menu_bar.add_cascade(label="Opción", menu=menu_bar)
+menu_bar.add_cascade(label="Opción", menu=file_menu)
                     
 ventana.config(menu_bar)
 ventana.mainloop()
