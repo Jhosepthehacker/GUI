@@ -20,8 +20,11 @@ ventana.geometry("400x400")
 etiqueta = tk.Label(ventana, text="Hola, Bienvenido(a) al proyecto", bg="blue)
 etiqueta.pack(pady=10)
 
-try:
-    ventana.config(menu_bar) # En desarrollo hasta que se creé la barra de menú y opciones
-except NameError:
-    print("Se capturó un NameError")
+menu_bar = Menu(ventana)
+                    
+file_menu = Menu(menu_bar, tearoff=0)
+file_menu.add_command(label="Salir", command=salir_pregunta)
+menu_bar.add_cascade(label="Opción", menu=menu_bar)
+                    
+ventana.config(menu_bar)
 ventana.mainloop()
