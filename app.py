@@ -1,6 +1,5 @@
 import tkinter as tk
-from tkinter import messagebox
-from tkinter import Menu
+from tkinter import messagebox, Menu, ttk
 from sys import exit
 from time import sleep
 
