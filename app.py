@@ -29,7 +29,7 @@ if question_to_user == "si" or question_to_user == "sí" or question_to_user == 
     label = tk.Label(root, text="Hola, Bienvenido(a) al proyecto", bg="blue")
     label.pack(pady=10)
 
-    button = tk.Button(root, text="Saludos", command=saludar_al_usuario)
+    button = ttk.Button(root, text="Saludos", command=saludar_al_usuario)
     button.pack(pady=6)
                     
     menu_bar = Menu(root)
