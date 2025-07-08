@@ -27,7 +27,7 @@ if question_to_user == "si" or preguntar_al_usuario == "sí" or preguntar_al_usu
     root.title("Proyecto GUI")
     root.geometry("400x400")
 
-    label = tk.Label(root, text="Hola, Bienvenido(a) al proyecto", bg="blue)
+    label = tk.Label(root, text="Hola, Bienvenido(a) al proyecto", bg="blue")
     label.pack(pady=10)
 
     button = tk.Button(root, text="Saludos", command=saludar_al_usuario)
