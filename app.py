@@ -42,7 +42,7 @@ if question_to_user == "si" or question_to_user == "sí" or question_to_user == 
     try:
         root.config(menu_bar) # TypeError, en desarrollo....
     except TypeError:
-        print("Hubo un TypeError, el menú de opciones no se mostrará")
+        print("Hubo un TypeError en la línea 43 en 'root.config(menu_bar)', el menú de opciones no se mostrará")
     root.mainloop()
 elif question_to_user == "no" or question_to_user == "no ":
     print("\nEl programa requiere de interfaz gráfica y si no estás en un entorno gráfico el programa se cierra")
