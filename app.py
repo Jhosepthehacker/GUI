@@ -22,7 +22,7 @@ def saludar_al_usuario():
 
 question_to_user = input("Este programa requiere de interfaz desea continuar, ¿Estás en un entorno gráfico?: ")
 
-if question_to_user == "si" or preguntar_al_usuario == "sí" or preguntar_al_usuario == "si " or preguntar_al_usuario == "sí ":
+if question_to_user == "si" or question_to_user == "sí" or question_to_user == "si " or question_to_user == "sí ":
     root = tk.Tk()
     root.title("Proyecto GUI")
     root.geometry("400x400")
