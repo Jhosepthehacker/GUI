@@ -38,8 +38,11 @@ if question_to_user == "si" or question_to_user == "sí" or question_to_user == 
     file_menu = Menu(menu_bar, tearoff=0)
     file_menu.add_command(label="Salir", command=salir_pregunta)
     menu_bar.add_cascade(label="Opción", menu=file_menu)
-                    
-    root.config(menu_bar)
+
+    try:
+        root.config(menu_bar) # TypeError, en desarrollo....
+    except TypeError:
+        print("Hubo un TypeError, el menú de opciones no se mostrará")
     root.mainloop()
 elif question_to_user == "no" or question_to_user == "no ":
     print("\nEl programa requiere de interfaz gráfica y si no estás en un entorno gráfico el programa se cierra")
