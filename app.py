@@ -5,13 +5,13 @@ from sys import exit
 from time import sleep
 
 def salir_pregunta():
-    mensaje_de_pregunta = messagebox.askquestion(
+    message_of_question = messagebox.askquestion(
    title="Pregunta",
    message="¿Quiéres salir de la ventana?"   
 )
-    if (mensaje_de_pregunta == "yes"):
+    if (message_of_question == "yes"):
         print("Ventana cerrada")
-        ventana.destroy()
+        root.destroy()
     else:
         print("La ventana todavía sigue abierta")
 def saludar_al_usuario():
@@ -20,29 +20,28 @@ def saludar_al_usuario():
   message="Hola, Saludos"       
 )
 
-preguntar_al_usuario = input("Este programa requiere de interfaz desea continuar, ¿Estás en un entorno gráfico?: ")
+question_to_user = input("Este programa requiere de interfaz desea continuar, ¿Estás en un entorno gráfico?: ")
 
-if preguntar_al_usuario == "si" or preguntar_al_usuario == "sí" or preguntar_al_usuario == "si " or preguntar_al_usuario == "sí ":
-    ventana = tk.Tk()
-    ventana.title("Proyecto GUI")
-    ventana.geometry("400x400")
+if question_to_user == "si" or preguntar_al_usuario == "sí" or preguntar_al_usuario == "si " or preguntar_al_usuario == "sí ":
+    root = tk.Tk()
+    root.title("Proyecto GUI")
+    root.geometry("400x400")
 
-    etiqueta = tk.Label(ventana, text="Hola, Bienvenido(a) al proyecto", bg="blue)
-    etiqueta.pack(pady=10)
+    label = tk.Label(root, text="Hola, Bienvenido(a) al proyecto", bg="blue)
+    label.pack(pady=10)
 
-    boton = tk.Button(ventana, text="Saludos", command=saludar_al_usuario)
-    boton.pack(pady=6)
+    button = tk.Button(root, text="Saludos", command=saludar_al_usuario)
+    button.pack(pady=6)
                     
-    menu_bar = Menu(ventana)
+    menu_bar = Menu(root)
                     
     file_menu = Menu(menu_bar, tearoff=0)
     file_menu.add_command(label="Salir", command=salir_pregunta)
     menu_bar.add_cascade(label="Opción", menu=file_menu)
                     
-    ventana.config(menu_bar)
-    ventana.mainloop()
-elif preguntar_al_usuario == "no" or preguntar_al_usuario == "no ":
+    root.config(menu_bar)
+    root.mainloop()
+elif question_to_user == "no" or preguntar_al_usuario == "no ":
     print("El programa requiere de interfaz gráfica y si no estás en un entorno gráfico el programa se cierra")
     sleep(1)
     exit()
-    
