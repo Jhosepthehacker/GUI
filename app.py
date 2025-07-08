@@ -41,7 +41,7 @@ if question_to_user == "si" or question_to_user == "sí" or question_to_user == 
                     
     root.config(menu_bar)
     root.mainloop()
-elif question_to_user == "no" or preguntar_al_usuario == "no ":
+elif question_to_user == "no" or question_to_user == "no ":
     print("El programa requiere de interfaz gráfica y si no estás en un entorno gráfico el programa se cierra")
     sleep(1)
     exit()
