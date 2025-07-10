@@ -1,7 +1,13 @@
 import tkinter as tk
+import sqlite3 as sql
 from tkinter import messagebox, Menu, ttk
 from sys import exit
 from time import sleep
+
+def create_data_base():
+    conn = sql.connect("data_base.db")
+    conn.commit()
+    conn.close()
 
 def salir_pregunta():
     message_of_question = messagebox.askquestion(
@@ -47,3 +53,6 @@ elif question_to_user == "no" or question_to_user == "no ":
     print("\nEl programa requiere de interfaz gráfica y si no estás en un entorno gráfico el programa se cierra")
     sleep(4)
     exit()
+
+if __name__ == '__main__':
+    create_data_base()
